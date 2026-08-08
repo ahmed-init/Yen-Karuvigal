@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tool Registry</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page-shell">
+      <header class="topbar">
+        <a class="brand" href="/">Tool<span>Registry</span></a>
+        <button class="primary-button" id="new-tool-button" type="button">+ Add tool</button>
+      </header>
+
+      <section class="intro">
+        <p class="eyebrow">YOUR WORKSPACE</p>
+        <h1>Keep track of the tools that matter.</h1>
+        <p>One simple place to manage your team's tools, their purpose, and current status.</p>
+      </section>
+
+      <section class="panel" aria-labelledby="tools-title">
+        <div class="panel-header">
+          <div>
+            <h2 id="tools-title">All tools</h2>
+            <p id="tool-count">Loading tools…</p>
+          </div>
+          <label class="search-box">
+            <span class="sr-only">Search tools</span>
+            <input id="search-input" type="search" placeholder="Search tools" />
+          </label>
+        </div>
+        <div id="feedback" class="feedback" role="status"></div>
+        <div id="tool-list" class="tool-list" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <dialog id="tool-dialog">
+      <form id="tool-form">
+        <div class="dialog-header">
+          <div>
+            <p class="eyebrow" id="form-eyebrow">NEW TOOL</p>
+            <h2 id="dialog-title">Add a tool</h2>
+          </div>
+          <button class="icon-button" id="close-dialog" type="button" aria-label="Close">×</button>
+        </div>
+        <input id="tool-id" type="hidden" />
+        <div class="form-grid">
+          <label>Name<input id="name" required maxlength="100" placeholder="e.g. Figma" /></label>
+          <label>Category<input id="category" required maxlength="100" placeholder="e.g. Design" /></label>
+          <label class="full-width">Purpose<textarea id="purpose" required rows="3" maxlength="500" placeholder="What do you use this tool for?"></textarea></label>
+          <label>Status<select id="status" required><option>Active</option><option>In progress</option><option>Paused</option><option>Archived</option></select></label>
+          <label>Difficulty<select id="difficulty" required><option>Easy</option><option>Medium</option><option>Advanced</option></select></label>
+        </div>
+        <div class="dialog-actions">
+          <button class="secondary-button" id="cancel-button" type="button">Cancel</button>
+          <button class="primary-button" id="save-button" type="submit">Save tool</button>
+        </div>
+      </form>
+    </dialog>
+    <script src="app.js"></script>
+  </body>
+</html>
