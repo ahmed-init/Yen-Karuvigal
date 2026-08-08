@@ -14,7 +14,6 @@
   "type": "commonjs",
   "dependencies": {
     "@types/express": "^5.0.6",
-    "@types/node": "^26.2.0",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
     "mysql2": "^3.23.2",
@@ -22,6 +21,7 @@
     "typescript": "^7.0.2"
   },
   "devDependencies": {
+    "@types/node": "^26.2.0",
     "npx": "^10.2.2"
   }
 }
