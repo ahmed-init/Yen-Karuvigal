@@ -1,3 +1,5 @@
+Live link:https://yen-karuvigal.onrender.com/
+
 # Tool Registry
 
 A simple REST API built with **Node.js, TypeScript, Express.js, and MySQL** for managing and tracking the different tools and technologies used in a project or by an individual.
@@ -409,5 +411,6 @@ Response
 ```
 
 The project serves as a foundation for building larger Node.js applications.
-
+Note: In this project there is no registration and login feature so there will be no authentication 
+      so it's a common tool manager and everyone can able to access even other user's tool.
 ---
